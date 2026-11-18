@@ -29,3 +29,39 @@ body {
     padding: 8px;
     flex: 1;
 }
+
+/* General style classes */
+
+.progress-bar {
+    width: calc(100% - 32px);
+    border: 2px solid grey;
+    height: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: start;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 100%;
+    transform-origin: left;
+    z-index: -1;
+    align-content: center;
+    justify-items: center;
+}
+
+.progress-bar-label {
+    transform: translate(0, -24px);
+    text-align: center;
+}
+
+/* Keywords */
+
+.health {
+    color: #df2d2d;
+    background-color: #df2d2d;
+}
+
+.text {
+    color: black
+}
