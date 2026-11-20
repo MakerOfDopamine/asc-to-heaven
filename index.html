@@ -6,6 +6,7 @@
     <title>Ascension to Heaven</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <script src="tabs.js"></script>
 </head>
 <body>
     <div id="notifications-ui"></div>
@@ -16,12 +17,49 @@
             </h1>
             <div id="health-bar" class="progress-bar">
                 <div id="health-bar-inner" class="progress-bar-inner health"></div>
-                <div id="health-bar-text" class="progress-bar-label">100 / 100</div>
+                <div id="health-bar-text" class="progress-bar-label">idk / idk</div>
             </div><br>
-            <div id="qi-bar" class="progress-bar"></div>
+            <div id="essence-bar" class="progress-bar">
+                <div id="essence-bar-inner" class="progress-bar-inner essence"></div>
+                <div id="essence-bar-text" class="progress-bar-label">idk / idk</div>
+            </div>
         </div>
         <div id="world-panel">
-            hi hi hi!
+            <div id="world-tab" class="tab">
+                <button id="cultivation-house" class="layer-buttons" style="left: 300px; top: 500px;" onclick="switchTab('cultivation')">
+                    Cultivate
+                </button>
+                <button id="alchemy-house" class="layer-buttons" style="left: 600px; top: -50px;" onclick="switchTab('alchemy')">
+                    Alchemy
+                </button>
+            </div>
+            <div id="cultivation-tab" class="tab image-background" style="display: none; background-image: url(room_cultivation.png);">
+                <button id="exit-cultivation-tab" class="layer-buttons" style="left: 150px; top: 100px;" onclick="switchTab('world')">
+                    Go outside
+                </button>
+                <button id="start-cultivation" class="layer-buttons" style="left: calc(50% - 60px); top: 420px; width: 120px; height: 75px;" onclick="startCultivate()">
+                    Start<br>
+                    Cultivating!
+                </button>
+            </div>
+            <div id="cultivation-in-progress-tab" class="tab" style="display: none;">
+                <button id="exit-cultivation-in-progress" class="layer-buttons" style="width: 160px; height: 40px; left: 25px; top: 25px;" onclick="stopCultivate()">
+                    Stop Cultivating
+                </button>
+                <div id="qi-current-stage" style="position: relative; top: calc(75% - 2ch); left: 50%; translate: -50% 0; width: fit-content;">
+                    Current stage: Mortal Body
+                </div>
+                <div id="qi-bar" class="progress-bar" style="position: relative; width: 50%; transform: translate(50%, 0); top: 75%;">
+                    <div id="qi-bar-inner" class="progress-bar-inner qi"></div>
+                    <div id="qi-bar-text" class="progress-bar-label">idk / idk</div>
+                </div>
+            </div>
+            <div id="alchemy-tab" class="tab" style="display: none;">
+                <button id="exit-alchemy-tab" class="layer-buttons" style="left: 150px; top: 100px;" onclick="switchTab('world')">
+                    Go outside
+                </button>
+                COMING SOON!
+            </div>
         </div>
         <div id="fixed-panel-right">
             Sample Text v2
