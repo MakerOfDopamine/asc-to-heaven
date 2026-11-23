@@ -14,3 +14,11 @@ function load() {
     game.enemy = null
     game.action = "world"
 }
+
+function reset() {
+    if (confirm("Are you sure you want to reset?")) {
+        game = null
+        save()
+        document.location.reload()
+    }
+}

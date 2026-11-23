@@ -22,6 +22,21 @@ body {
     background-color: #cfffcf;
 }
 
+#fixed-panel-left-bottom {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    width: 100%;
+    gap: 16px;
+    button {
+        width: 100%;
+        height: 32px;
+        border: 2px solid black;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+}
+
 #world-panel {
     aspect-ratio: 1;
     height: min(100vh, 0.625 * 100vw);
